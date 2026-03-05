@@ -5,11 +5,11 @@ const ThemeSystem = {
     light: {
       '--bg-color': '#ffffff',
       '--text-color': '#333333',
-      '--primary-color': 'rgba(14, 144, 210, .9)',
-      '--primary-hover': 'rgba(14, 144, 210, 1)',
-      '--secondary-color': 'rgba(14, 144, 210, .8)',
+      '--primary-color': 'rgba(255, 140, 0, .9)',
+      '--primary-hover': 'rgba(255, 140, 0, 1)',
+      '--secondary-color': 'rgba(255, 140, 0, .8)',
       '--input-bg': '#f5f5f5',
-      '--input-border': 'rgba(14, 144, 210, .8)',
+      '--input-border': 'rgba(255, 140, 0, .8)',
       '--card-bg': '#f9f9f9',
       '--history-bg': '#ffffff',
       '--history-text': '#333333',
@@ -18,11 +18,11 @@ const ThemeSystem = {
     dark: {
       '--bg-color': '#121212',
       '--text-color': '#ffffff',
-      '--primary-color': 'rgba(14, 144, 210, .9)',
-      '--primary-hover': 'rgba(14, 144, 210, 1)',
-      '--secondary-color': 'rgba(14, 144, 210, .8)',
+      '--primary-color': 'rgba(255, 140, 0, .9)',
+      '--primary-hover': 'rgba(255, 140, 0, 1)',
+      '--secondary-color': 'rgba(255, 140, 0, .8)',
       '--input-bg': 'rgba(255, 255, 255, 0.1)',
-      '--input-border': 'rgba(14, 144, 210, .8)',
+      '--input-border': 'rgba(255, 140, 0, .8)',
       '--card-bg': 'rgba(255, 255, 255, 0.1)',
       '--history-bg': '#2a2a2a',
       '--history-text': '#ffffff',
@@ -106,10 +106,11 @@ const ThemeSystem = {
   }
 };
 
-// 页面加载时初始化主题
-document.addEventListener('DOMContentLoaded', () => {
-  ThemeSystem.init();
+// 立即初始化主题，确保在页面渲染前应用
+ThemeSystem.init();
 
+// 页面加载完成后绑定事件
+document.addEventListener('DOMContentLoaded', () => {
   // 主题选择按钮事件
   const themeBtn = document.getElementById('theme_btn');
   const themeDropdown = document.getElementById('theme_dropdown');

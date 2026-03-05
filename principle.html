@@ -1,15 +1,21 @@
 <!DOCTYPE html>
-<html>
+<html lang="zh-CN">
 	<head>
 		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no" />
+		<meta name="viewport" content="width=device-width,initial-scale=1" />
 		<meta name="referrer" content="never" />
+		<meta name="description" content="视频播放原理 - 在线视频播放器的技术原理和工作机制" />
 		<title>视频播放原理 - 在线视频播放器</title>
 		<link rel="icon" type="image/x-icon" href="img/favicon.ico" />
 		<link rel="stylesheet" type="text/css" href="css/main.css" />
 		<link rel="stylesheet" type="text/css" href="css/message.css" />
-		<script data-cfasync="false" src="https://cmp.gatekeeperconsent.com/min.js"></script>
-		<script data-cfasync="false" src="https://the.gatekeeperconsent.com/cmp.min.js"></script>
+		<link rel="preconnect" href="https://cmp.gatekeeperconsent.com" />
+		<link rel="preconnect" href="https://the.gatekeeperconsent.com" />
+		<link rel="preconnect" href="https://www.ezojs.com" />
+		<link rel="preconnect" href="https://ezoicanalytics.com" />
+		<link rel="preconnect" href="https://pagead2.googlesyndication.com" />
+		<script data-cfasync="false" src="https://cmp.gatekeeperconsent.com/min.js" defer></script>
+		<script data-cfasync="false" src="https://the.gatekeeperconsent.com/cmp.min.js" defer></script>
 		<script async src="//www.ezojs.com/ezoic/sa.min.js"></script>
 		<script>
 			window.ezstandalone = window.ezstandalone || {};
@@ -18,16 +24,18 @@
 		<script src="//ezoicanalytics.com/analytics.js"></script>
 		<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6784667593186440" crossorigin="anonymous"></script>
 		<script src="js/jquery.js"></script>
-		<script src="js/jQuery-Extensions-touchJS.js"></script>
-		<script src="js/videoControl.js"></script>
-		<script src="js/hls.min.js"></script>
-		<script src="js/flv.min.js"></script>
-		<script src="https://cdn.jsdelivr.net/npm/i18next@23.11.5/dist/umd/i18next.min.js"></script>
-		<script src="js/main.js"></script>
-		<script src="js/i18n.js"></script>
+		<script src="js/jQuery-Extensions-touchJS.js" defer></script>
+		<script src="js/videoControl.js" defer></script>
+		<script src="js/hls.min.js" defer></script>
+		<script src="js/flv.min.js" defer></script>
+		<script src="https://cdn.jsdelivr.net/npm/i18next@23.11.5/dist/umd/i18next.min.js" defer></script>
+		<script src="js/i18n.js" defer></script>
+		<script src="js/main.js" defer></script>
 		<script src="js/theme.js"></script>
+		<script async custom-element="amp-auto-ads" src="https://cdn.ampproject.org/v0/amp-auto-ads-0.1.js"></script>
 	</head>
 	<body>
+		<amp-auto-ads type="adsense" data-ad-client="ca-pub-6784667593186440"></amp-auto-ads>
 		<div id="main_box">
 			<div id="logo_box">在线视频播放器</div>
 			<div id="nav_box">

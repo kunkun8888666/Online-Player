@@ -107,6 +107,33 @@ const ThemeSystem = {
 };
 
 // 立即初始化主题，确保在页面渲染前应用
+(function() {
+  // 从localStorage获取主题偏好
+  let savedTheme;
+  try {
+    const saved = localStorage.getItem('themePreference');
+    savedTheme = saved ? JSON.parse(saved) : 'system';
+  } catch (e) {
+    savedTheme = 'system';
+  }
+
+  // 确定要使用的主题
+  let targetTheme;
+  if (savedTheme === 'system') {
+    const isDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches;
+    targetTheme = isDarkMode ? 'dark' : 'light';
+  } else {
+    targetTheme = savedTheme;
+  }
+
+  // 应用主题变量
+  const themeColors = ThemeSystem.themes[targetTheme];
+  for (const [key, value] of Object.entries(themeColors)) {
+    document.documentElement.style.setProperty(key, value);
+  }
+})();
+
+// 初始化主题系统
 ThemeSystem.init();
 
 // 页面加载完成后绑定事件

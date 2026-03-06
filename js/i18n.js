@@ -163,8 +163,6 @@ const I18nSystem = {
             'submit': '提交',
             'faq_reference': '常见问题',
             'faq_link': '如果您有常见问题，请先查看我们的帮助中心，那里可能已经有您需要的答案。',
-            'working_hours': '工作时间',
-            'hours_content': '我们的工作时间为周一至周五，上午9:00至下午6:00（北京时间）。我们会在工作时间内尽快回复您的消息。',
             
             // 设置页面
             'settings_page': '设置',
@@ -332,8 +330,6 @@ const I18nSystem = {
             'submit': 'Submit',
             'faq_reference': 'Common Questions',
             'faq_link': 'If you have common questions, please check our Help Center first, where you may already find the answers you need.',
-            'working_hours': 'Working Hours',
-            'hours_content': 'Our working hours are Monday to Friday, 9:00 AM to 6:00 PM (Beijing time). We will reply to your messages as soon as possible during working hours.',
             
             // Settings Page
             'settings_page': 'Settings',
@@ -666,9 +662,6 @@ const I18nSystem = {
     
     if (h2s.length > 2) h2s[2].textContent = i18next.t('faq_reference');
     if (paragraphs.length > 2) paragraphs[2].textContent = i18next.t('faq_link');
-    
-    if (h2s.length > 3) h2s[3].textContent = i18next.t('working_hours');
-    if (paragraphs.length > 3) paragraphs[3].textContent = i18next.t('hours_content');
   },
 
   // 更新设置页面
